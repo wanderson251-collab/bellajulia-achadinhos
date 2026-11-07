@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bella Júlia achadinhos</title>
+<meta name="description" content="Os produtos dos posts de @bellajuliaoficial, numerados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --papel: #F2E2E2;
+  --tinta: #141014;
+  --suave: #6B5560;
+  --linha: #E3C9CF;
+  --amora: #EC136C;
+  --etiqueta: #141014;
+  --branco: #FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #1C1418;
+    --tinta: #F6ECEF;
+    --suave: #B9A3AC;
+    --linha: #3A2A31;
+    --amora: #FF3D88;
+    --etiqueta: #F6ECEF;
+    --branco: #2A1E24;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.45;
+}
+.pagina { max-width: 480px; margin: 0 auto; padding: 28px 16px 48px; }
+
+.topo { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.topo h1 { margin: 0; font-family: "Abril Fatface", serif; font-weight: 400; font-size: 26px; }
+.topo span { color: var(--suave); font-size: 15px; }
+
+.busca { margin: 28px 0 8px; }
+.busca label { display: block; font-size: 17px; font-weight: 500; max-width: 26ch; }
+.campo { display: flex; align-items: stretch; margin-top: 12px; }
+.campo input {
+  flex: 1; min-width: 0;
+  font: inherit; font-size: 64px; font-weight: 800; font-stretch: 75%;
+  line-height: 1; letter-spacing: -0.02em;
+  color: var(--amora); background: transparent;
+  border: 0; border-bottom: 3px solid var(--tinta);
+  padding: 4px 0 6px; border-radius: 0;
+}
+.campo input::placeholder { color: var(--linha); }
+.campo input:focus { outline: none; border-bottom-color: var(--amora); }
+.campo button {
+  font: inherit; font-size: 17px; font-weight: 650;
+  background: var(--tinta); color: var(--papel);
+  border: 0; padding: 0 20px; margin-left: 12px; border-radius: 999px;
+  align-self: center; height: 48px; cursor: pointer;
+}
+.campo button:focus-visible, .comprar:focus-visible { outline: 3px solid var(--amora); outline-offset: 3px; }
+.aviso { min-height: 1.45em; margin: 8px 0 0; color: var(--amora); font-size: 15px; }
+
+.lista { list-style: none; margin: 24px 0 0; padding: 0; }
+.item {
+  display: grid; grid-template-columns: 64px 1fr; gap: 12px;
+  padding: 18px 0; border-top: 1px solid var(--linha);
+  scroll-margin-top: 16px;
+}
+.num {
+  font-size: 56px; font-weight: 800; font-stretch: 75%;
+  line-height: 0.85; letter-spacing: -0.03em; color: var(--tinta);
+  font-variant-numeric: tabular-nums;
+}
+.foto { width: 112px; height: 112px; object-fit: cover; border-radius: 12px; float: right; margin: 0 0 8px 12px; background: var(--branco); }
+.nome {
+  margin: 0; font-size: 16px;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.linha { clear: both; display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; }
+.preco {
+  position: relative; display: inline-block;
+  background: var(--etiqueta); color: var(--papel);
+  font-weight: 750; font-size: 18px; font-variant-numeric: tabular-nums;
+  padding: 4px 10px 4px 20px; white-space: nowrap;
+  clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+}
+.preco::before {
+  content: ""; position: absolute; left: 8px; top: 50%; width: 5px; height: 5px;
+  margin-top: -2.5px; border-radius: 50%; background: var(--papel);
+}
+.comprar {
+  font-weight: 650; font-size: 16px; text-decoration: none;
+  color: var(--branco); background: var(--amora);
+  padding: 12px 16px; border-radius: 999px; min-height: 44px; white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) { .comprar { color: #1A1424; } }
+
+.item.achado { animation: achado 1.6s ease-out; }
+@keyframes achado {
+  0% { background: color-mix(in srgb, var(--etiqueta) 55%, transparent); }
+  100% { background: transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .item.achado { animation: none; outline: 2px solid var(--amora); }
+  html { scroll-behavior: auto; }
+}
+
+.rodape { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--linha); color: var(--suave); font-size: 14px; }
+.rodape p { margin: 0 0 8px; max-width: 60ch; }
+</style>
+</head>
+<body>
+<main class="pagina">
+  <header class="topo">
+    <h1>Bella Júlia achadinhos</h1>
+    <span>@bellajuliaoficial</span>
+  </header>
+
+  <form class="busca" id="busca" autocomplete="off">
+    <label for="numero">Viu um produto no post? Digite o número dele aqui.</label>
+    <div class="campo">
+      <input id="numero" inputmode="numeric" pattern="[0-9]*" placeholder="0" maxlength="4" aria-describedby="aviso">
+      <button type="submit">Achar</button>
+    </div>
+    <p class="aviso" id="aviso" role="status"></p>
+  </form>
+
+  <ol class="lista" reversed>
+    <li class="item" id="p1">
+      <span class="num" aria-label="Produto 1">1</span>
+      <div class="corpo">
+        <img class="foto" src="https://cf.shopee.com.br/file/br-11134207-820lg-mpwag034oow174_tn" alt="" loading="lazy">
+        <p class="nome">Sutia Nayane Rodrigues Tomara que Caia com Bojo e Aro Liso de Alta Sustentacao Push Up Confortavel</p>
+        <div class="linha">
+          <span class="preco">R$ 66,90</span>
+          <a class="comprar" href="https://shope.ee/an_redir?origin_link=https%3A%2F%2Fshopee.com.br%2Fproduct%2F800864347%2F19897425032&amp;affiliate_id=18350560296&amp;sub_id=ig1" rel="sponsored noopener" target="_blank">Ver na Shopee</a>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <footer class="rodape">
+    <p>Os links são de afiliada: se você comprar por eles, eu recebo uma comissão e você não paga nada a mais.</p>
+    <p>Preços conferidos em 07/11/2026. Na Shopee eles mudam rápido; vale o que aparecer lá.</p>
+  </footer>
+</main>
+<script>
+(function () {
+  var form = document.getElementById("busca");
+  var campo = document.getElementById("numero");
+  var aviso = document.getElementById("aviso");
+  function ir(n) {
+    var alvo = document.getElementById("p" + n);
+    if (!alvo) {
+      aviso.textContent = "O número " + n + " não está na lista. Confira o número no post.";
+      return;
+    }
+    aviso.textContent = "";
+    alvo.classList.remove("achado");
+    void alvo.offsetWidth;
+    alvo.classList.add("achado");
+    alvo.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var n = parseInt(campo.value, 10);
+    if (n) ir(n); else aviso.textContent = "Digite o número que aparece no post.";
+  });
+  var deLink = parseInt((location.hash || "").replace("#p", ""), 10);
+  if (deLink) { campo.value = deLink; ir(deLink); }
+})();
+</script>
+</body>
+</html>
